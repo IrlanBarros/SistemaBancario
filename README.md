@@ -1,1 +1,2 @@
 "# SistemaBancario" 
+*.o

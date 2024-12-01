@@ -9,21 +9,6 @@
 #define MAX_NOME 80 // Definição do tamanho máximo de caracteres para os nomes
 #define MAX_CPF 20
 
-/*ALTERAÇÕES:
- -Coloquei a função `setbuf()` após as chamadas de `scanf()`, em alguns casos, o `scanf()` ficou entre duas chamadas de `setbuf()` por medidade de segurança com lixo de memória.
- -Após chamada de `fgets()` usei a função `strcspn()` para remoção do "\n" da leitura da string.
- -Mudei `printf("Digite 0 para sair ou 1 para tentar novamente: ");` para `printf("Digite 1 para tentar novamente ou qualquer outro dígito para sair: ");`, tendo em vista que, independentemente
- do dígito digitado ser 0 (zer), contanto que ele seja diferente de 1, a resposta do sistema será cair dentro do `else` e fazer a chamada do procedimento `TelaInicial()`.
- -Saí adicionando as funções `system("pause")` e `system("cls")` em pontos estratégicos, para fins de evitar a poluição da tela e melhorar o fluxo de execução do código.
-*/
-
-/*OBSERVAÇÕES:
-- Não entendi o papel que a variável `bool opcSair` cumpre dentro do procedimento `ConsultarCliente()`.
--Dentro do último `else` do `switch()` do procedimento `EditarCliente()`, eu não entendi o porquê do procedimento `TelaInicial()` está sendo chamado com o valor 0 (zero) dentro do argumento.
--ps: quanto ao tópico acima, eu removi, quando fiz a mudança para `printf("Digite 1 para tentar novamente ou qualquer outro dígito para sair: ");`.
--A função `setlocale()` dentro da `main()` está sendo chamda da seguinte forma: `setlocale(LC_ALL, "");`, como não sei se é intencional ou não, não coloquei "Portuguese" dentro das aspas duplas.
-*/
-
 typedef struct {
     int id;
     char cpf[MAX_CPF];
