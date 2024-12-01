@@ -1,8 +1,0 @@
-# depslib dependency file v1.0
-1732734980 source:c:\users\softex\documents\sistemabancariovol2\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<locale.h>
-	<stdbool.h>
-
